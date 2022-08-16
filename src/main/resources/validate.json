@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties":
+      {
+        "tran_ref" : {"type": "string", "required" : true},
+        "tran_date" : {"type" :  "object", "required" : true},
+        "tran_ccy"  : {"type" :  "string", "required" : true},
+        "tran_sub_type": {"type" :  "string", "enum": ["CI" , "BI"], "required" : true},
+        "part_tran" : {"type" :  "array",
+        "items" : {
+          "type" : "object",
+          "required" : ["acct_no","amount","rmks","type","narration"],
+          "properties" : {
+            "acct_no" : {"type" : "string"},
+            "amount" : {"type" :  "string"},
+            "rmks" : {"type" :  "string"},
+            "type" : {"type" :  "string", "enum" : ["D" , "C"]}
+          }
+        }
+
+        }
+      }
+}
