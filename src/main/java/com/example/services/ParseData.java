@@ -35,10 +35,7 @@ public class ParseData {
 
         ProcessingReport report;
 
-        report = schema.validate(jsonStringObj);
-
-
-
+//        report = schema.validate(jsonStringObj);
 
         return null;
     }
